@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kerala Waste Collection - Request Service</title>
+  <link rel="stylesheet" href="client-side.css">
+</head>
+<body>
+  <!-- Request Pickup Interface -->
+  <div id="request-pickup" style="display: block;">
+    <header class="header container">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" stroke="#0d9488" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Green Kerala
+      </div>
+      <div style="display: flex; align-items: center; gap: 20px;">
+        <div style="position: relative;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span style="position: absolute; top: -8px; right: -8px; background-color: var(--error); color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 12px; display: flex; align-items: center; justify-content: center;">2</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 40px; height: 40px; border-radius: 50%; background-color: #ddd; overflow: hidden;">
+            <img src="/api/placeholder/40/40" alt="Profile" style="width: 100%; height: 100%; object-fit: cover;">
+          </div>
+          <span>Rajesh Kumar</span>
+        </div>
+        <button class="btn btn-secondary">Back to Dashboard</button>
+      </div>
+    </header>
+    
+    <div class="container">
+      <div class="dashboard">
+        <div class="sidebar">
+          <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+              <polyline points="9 22 9 12 15 12 15 22"></polyline>
+            </svg>
+            Dashboard
+          </div>
+          <div class="menu-item active">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            My Requests
+          </div>
+          <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+              <line x1="1" y1="10" x2="23" y2="10"></line>
+            </svg>
+            Payments
+          </div>
+          <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"></polyline>
+              <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"></path>
+            </svg>
+            Waste Types
+          </div>
+          <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+              <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            </svg>
+            Profile
+          </div>
+          <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="3"></circle>
+              <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+            </svg>
+            Settings
+          </div>
+          <div class="menu-item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+              <polyline points="16 17 21 12 16 7"></polyline>
+              <line x1="21" y1="12" x2="9" y2="12"></line>
+            </svg>
+            Logout
+          </div>
+        </div>
+        
+        <div class="dashboard-content">
+          <h2 style="margin-bottom: 30px;">Request Waste Pickup</h2>
+          
+          <div class="steps">
+            <div class="step active">
+              <div class="step-number">1</div>
+              <div class="step-title">Select Waste Type</div>
+            </div>
+            <div class="step">
+              <div class="step-number">2</div>
+              <div class="step-title">Schedule Pickup</div>
+            </div>
+            <div class="step">
+              <div class="step-number">3</div>
+              <div class="step-title">Payment</div>
+            </div>
+            <div class="step">
+              <div class="step-number">4</div>
+              <div class="step-title">Confirmation</div>
+            </div>
+          </div>
+          
+          <h3 style="margin-bottom: 20px;">Select Waste Type</h3>
+          
+          <div class="waste-type-card selected">
+            <div class="waste-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 6h18"></path>
+                <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+              </svg>
+            </div>
+            <div class="waste-info">
+              <div class="waste-type-title">General Household Waste</div>
+              <div class="waste-type-desc">Regular non-recyclable household waste</div>
+            </div>
+            <div class="waste-price">₹75/pickup</div>
+          </div>
+          
+          <div class="waste-type-card">
+            <div class="waste-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 21h10"></path>
+                <path d="M12 21v-6"></path>
+                <path d="M3.58 5.41h16.84"></path>
+                <path d="M5.25 3.5h13.5"></path>
+                <path d="M4.5 7.5v6.83"></path>
+                <path d="M19.5 7.5v6.83"></path>
+                <path d="M4.89 15h14.22"></path>
+                <path d="M4.89 15l-1.05 4.5"></path>
+                <path d="M19.11 15l1.05 4.5"></path>
+              </svg>
+            </div>
+            <div class="waste-info">
+              <div class="waste-type-title">Recyclable Waste</div>
+              <div class="waste-type-desc">Paper, plastic, glass, and metal items</div>
+            </div>
+            <div class="waste-price">₹50/pickup</div>
+          </div>
+          
+          <div class="waste-type-card">
+            <div class="waste-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 2v2"></path>
+                <path d="M18 2v2"></path>
+                <rect x="2" y="5" width="20" height="17" rx="2"></rect>
+              </svg>
+            </div>
+            <div class="waste-info">
+              <div class="waste-type-title">Organic Waste</div>
+              <div class="waste-type-desc">Kitchen waste, garden waste, and compostable items</div>
+            </div>
+            <div class="waste-price">₹60/pickup</div>
+          </div>
+          
+          <div class="waste-type-card">
+            <div class="waste-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M10 2v4"></path>
+                <path d="M14 2v4"></path>
+                <path d="M2 14h8"></path>
+                <path d="M14 14h8"></path>
+                <path d="M10 18v4"></path>
+                <path d="M14 18v4"></path>
+                <path d="M6 6h12a4 4 0 0 1 4 4v4a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4v-4a4 4 0 0 1 4-4z"></path>
+              </svg>
+            </div>
+            <div class="waste-info">
+              <div class="waste-type-title">E-Waste</div>
+              <div class="waste-type-desc">Electronic items, batteries, and computer parts</div>
+            </div>
+            <div class="waste-price">₹120/pickup</div>
+          </div>
+          
+          <div class="waste-type-card">
+            <div class="waste-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22v-5"></path>
+                <path d="M9 7V2"></path>
+                <path d="M15 7V2"></path>
+                <path d="M5 10V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2z"></path>
+                <path d="M8 22V7m0 0l-3 1.5C4 10 3 11 3 13s2 3 3 3c3.5 0 4-3 4-4.5"></path>
+                <path d="M16 22V14m0 0l3-1.5c1-.5 2-1.5 2-3.5s-2-3-3-3c-3.5 0-4 3-4 4.5"></path>
+              </svg>
+            </div>
+            <div class="waste-info">
+              <div class="waste-type-title">Hazardous Waste</div>
+              <div class="waste-type-desc">Chemicals, paints, and other hazardous materials</div>
+            </div>
+            <div class="waste-price">₹150/pickup</div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Estimated Weight (kg)</label>
+            <input type="number" class="form-input" placeholder="Enter estimated weight" value="15">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Additional Notes</label>
+            <textarea class="form-input" rows="3" placeholder="Provide any additional details about the waste..."></textarea>
+          </div>
+          
+          <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+            <button class="btn btn-secondary">Back to Dashboard</button>
+            <button class="btn btn-primary" onclick="showSchedulePickup()">Continue to Schedule</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Schedule Pickup Interface -->
+  <div id="schedule-pickup" style="display: none;">
+    <header class="header container">
+      <div class="logo">
+        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2M9 5a2 2 0 0 0 2 2h2a2 2 0 0 0 2-2M9 5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2m-3 7h3m-3 4h3m-6-4h.01M9 16h<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'92158bd65c2cbcea',t:'MTc0MjE0MTY5NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+</body>
+</html>
